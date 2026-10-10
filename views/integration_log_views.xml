@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- List view -->
+    <record id="view_integration_log_list" model="ir.ui.view">
+        <field name="name">integration.log.list</field>
+        <field name="model">integration.log</field>
+        <field name="arch" type="xml">
+            <list string="Integration Logs">
+                <field name="create_date"/>
+                <field name="object_type"/>
+                <field name="description"/>
+                <field name="external_id"/>
+                <field name="odoo_id"/>
+                <field name="status"/>
+                <field name="message"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form view -->
+    <record id="view_integration_log_form" model="ir.ui.view">
+        <field name="name">integration.log.form</field>
+        <field name="model">integration.log</field>
+        <field name="arch" type="xml">
+            <form string="Integration Log">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="create_date" readonly="1"/>
+                            <field name="object_type"/>
+                            <field name="description"/>
+                            <field name="external_id"/>
+                        </group>
+                        <group>
+                            <field name="odoo_id"/>
+                            <field name="status"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <field name="message"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_integration_log" model="ir.actions.act_window">
+        <field name="name">Integration Logs</field>
+        <field name="res_model">integration.log</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem
+        id="menu_integration_root"
+        name="Integration"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_integration_log"
+        name="Exchange Logs"
+        parent="menu_integration_root"
+        action="action_integration_log"
+        sequence="10"
+    />
+
+</odoo>
