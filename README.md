@@ -94,11 +94,12 @@ integration_bas/
 ├── security/
 ├── views/
 ├── bas/
+│   └── form.png
+│   └── VIA_integration_odoo.cfe
 ├── docs/
 │   └── images/
 │       ├── architecture.png
-│       ├── integration_log_odoo.png
-│       └── integration_log_bas.png
+│       ├── logs.png
 ├── tests/
 ├── __init__.py
 ├── __manifest__.py
