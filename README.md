@@ -78,11 +78,11 @@ Both systems maintain integration logs to help diagnose synchronization issues a
 
 ### Odoo Integration Log
 
-![Odoo integration log](docs/images/integration_log_odoo.png)
+![Odoo integration log](docs/images/logs.png)
 
 ### BAS Integration Log
 
-![BAS integration log](docs/images/integration_log_bas.png)
+![BAS integration log](bas/logs.png)
 
 ## Project Structure
 
