@@ -10,7 +10,11 @@ class IntegrationLog(models.Model):
     external_id = fields.Char(string="External ID", index=True,)
 
     object_type = fields.Selection(
-        selection=[("partner", "Partner"),("product", "Product"),],
+        selection=[
+            ("partner", "Partner"),
+            ("product", "Product"),
+            ("sale_order", "Sale Order"),
+        ],
         string="Object Type",
         required=True,
         index=True,
